@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M&E - Lucha contra la Trata de Personas | Ministerio de Seguridad PBA</title>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@400;500;600;700;800&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style type="text/tailwindcss">
+        @theme {
+            --color-mseg-teal: #00aec3;
+            --color-mseg-teal-dark: #008299;
+            --color-mseg-navy: #004d5a;
+            --color-mseg-slate: #1e293b;
+            --color-mseg-bg: #f8fafc;
+        }
+        body {
+            font-family: 'Encode Sans', 'Roboto', system-ui, sans-serif;
+            background-color: var(--color-mseg-bg);
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-12px); }
+            100% { transform: translateY(0px); }
+        }
+        .animate-fade-in-up {
+            animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            opacity: 0;
+        }
+        .animate-float {
+            animation: float 10s ease-in-out infinite;
+        }
+        .delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
+        .delay-300 { animation-delay: 300ms; }
+
+        /* Ajustes de escala responsiva para pantallas notebook o altura vertical acotada */
+        @media (max-height: 880px) {
+            .hero-card {
+                max-width: 68rem !important;
+                padding: 1.25rem 1.75rem !important;
+            }
+            .hero-title {
+                font-size: 1.45rem !important;
+                line-height: 1.3 !important;
+                margin-bottom: 0.25rem !important;
+            }
+            .hero-subtitle {
+                font-size: 0.825rem !important;
+            }
+            .hero-institution {
+                font-size: 0.8rem !important;
+                margin-top: 0.15rem !important;
+            }
+            .hero-body {
+                font-size: 0.875rem !important;
+                line-height: 1.45 !important;
+                margin-bottom: 0.9rem !important;
+            }
+            .hero-body p {
+                margin-bottom: 0.5rem !important;
+            }
+            .hero-btn-container {
+                padding-top: 0.35rem !important;
+            }
+            .hero-btn {
+                padding: 0.55rem 1.6rem !important;
+                font-size: 0.875rem !important;
+            }
+        }
+
+        @media (max-height: 740px) {
+            .hero-card {
+                padding: 1rem 1.25rem !important;
+            }
+            .hero-title {
+                font-size: 1.25rem !important;
+            }
+            .hero-body {
+                font-size: 0.8rem !important;
+                line-height: 1.38 !important;
+            }
+            .hero-body p {
+                margin-bottom: 0.35rem !important;
+            }
+        }
+    </style>
+</head>
+<body class="text-slate-800 flex flex-col min-h-screen antialiased selection:bg-[#00aec3] selection:text-white">
+
+    <!-- Header Institucional -->
+    <header class="bg-white/95 backdrop-blur-md shadow-xs px-5 sm:px-8 py-2.5 sm:py-3.5 flex justify-between items-center z-20 border-b border-slate-100 sticky top-0">
+        <div class="flex items-center gap-3">
+            <img src="assets/logo_ministerio.svg" alt="Ministerio de Seguridad - PBA" class="h-8 sm:h-9 object-contain">
+        </div>
+        <img src="assets/logo_gba.svg" alt="Gobierno de la Provincia de Buenos Aires" class="h-7 sm:h-8 object-contain opacity-85 hover:opacity-100 transition-opacity">
+    </header>
+
+    <!-- Main Hero Content -->
+    <main class="flex-1 flex items-center justify-center relative py-4 sm:py-6 px-4 sm:px-6 w-full">
+        <!-- Fondo sutil de gradiente decorativo -->
+        <div class="absolute inset-0 opacity-15 pointer-events-none animate-float" style="background-image: radial-gradient(circle at 50% 45%, #00aec3 0%, transparent 65%);"></div>
+        <div class="absolute -top-24 -right-24 w-96 h-96 bg-cyan-200/20 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-teal-200/20 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="hero-card w-full max-w-4xl bg-white/95 backdrop-blur-sm rounded-2xl shadow-xl shadow-slate-200/50 border border-slate-100 p-6 sm:p-8 lg:p-9 relative z-10 animate-fade-in-up my-auto">
+            
+            <!-- Encabezado y Título -->
+            <div class="text-left mb-5 sm:mb-6 animate-fade-in-up delay-100 border-b border-slate-100 pb-4">
+                <span class="hero-subtitle inline-block text-xs sm:text-sm font-bold text-[#00aec3] tracking-wide uppercase mb-1">
+                    Estrategia de Monitoreo y Evaluación
+                </span>
+                <h1 class="hero-title text-xl sm:text-2xl lg:text-3xl font-extrabold text-[#00768c] tracking-tight mb-2 leading-tight">
+                    Programa de fortalecimiento de las capacidades de la policía bonaerense en la lucha contra la trata de personas y delitos conexos
+                </h1>
+                <p class="hero-institution text-xs sm:text-sm font-semibold text-[#00aec3]">
+                    Provincia de Buenos Aires <span class="font-normal text-slate-400">|</span> Ministerio de Seguridad
+                </p>
+            </div>
+
+            <!-- Cuerpo de Texto (Bosquejo Oficial) -->
+            <div class="hero-body text-slate-700 space-y-3.5 sm:space-y-4 text-left leading-relaxed text-sm sm:text-base animate-fade-in-up delay-200">
+                <p>
+                    La estrategia de monitoreo y evaluación del <strong class="text-slate-900 font-bold">Programa de fortalecimiento de las capacidades de las Policías de la Provincia de Buenos Aires en la lucha contra la trata de personas y delitos conexos</strong> tiene como propósito fortalecer la gestión del programa y contribuir a la toma de decisiones estratégicas basada en evidencia.
+                </p>
+                <p>
+                    El programa surge de la necesidad de fortalecer la capacidad de respuesta policial frente a un delito complejo y dinámico, cuyas modalidades de captación, explotación, ocultamiento y financiamiento incorporan nuevas dimensiones, entre ellas el uso de entornos digitales. En este contexto, el programa busca generar condiciones institucionales que permitan mejorar de manera sostenida el reconocimiento del delito, la gestión de la información, la estandarización de las actuaciones y la coordinación con otros actores del sistema, priorizando la protección de las víctimas.
+                </p>
+                <p>
+                    La línea de base del programa está compuesta por <strong class="text-slate-900 font-bold">15 indicadores: 11 de resultados y 4 de impacto</strong>. Estos indicadores fueron definidos a partir de la <strong class="text-slate-900 font-bold">Teoría de Cambio</strong> y se organizan en cuatro ejes que representan sus principales dimensiones de intervención: <strong class="text-slate-900 font-bold">formación, información, estandarización y coordinación interinstitucional</strong>.
+                </p>
+                <p>
+                    Para facilitar la exploración de los datos, el seguimiento de los avances y el análisis de los resultados, el tablero se estructura en <strong class="text-slate-900 font-bold">cinco vistas</strong>, correspondientes a cada uno de estos ejes de intervención y al impacto global del programa.
+                </p>
+            </div>
+
+            <!-- Botón de Acción -->
+            <div class="hero-btn-container text-center sm:text-right animate-fade-in-up delay-300 pt-3 sm:pt-4">
+                <a href="dashboard.html" class="hero-btn inline-flex items-center gap-2.5 bg-[#00aec3] hover:bg-[#009bb0] text-white px-7 py-3 rounded-xl text-sm sm:text-base font-bold transition-all duration-300 shadow-md shadow-[#00aec3]/30 hover:shadow-lg hover:shadow-[#00aec3]/40 hover:-translate-y-0.5 w-full sm:w-auto justify-center cursor-pointer">
+                    <span>Ingresar al Tablero Interactivo</span>
+                    <i class="fa-solid fa-arrow-right text-xs sm:text-sm transition-transform group-hover:translate-x-1"></i>
+                </a>
+            </div>
+            
+        </div>
+    </main>
+
+    <!-- Footer Institucional -->
+    <footer class="bg-slate-900 text-slate-300 py-2.5 sm:py-3 text-center text-xs border-t border-slate-800">
+        <div class="container mx-auto px-4 flex flex-col sm:flex-row justify-between items-center gap-1.5 text-slate-400">
+            <p>Programa de fortalecimiento en la lucha contra la trata de personas y delitos conexos</p>
+            <p class="font-medium text-slate-300">Ministerio de Seguridad &middot; Provincia de Buenos Aires</p>
+        </div>
+    </footer>
+
+</body>
+</html>
