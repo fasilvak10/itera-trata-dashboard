@@ -108,10 +108,10 @@
         }
     </style>
 </head>
-<body class="text-slate-800 flex flex-col min-h-screen antialiased selection:bg-[#009aae] selection:text-white">
+<body class="text-slate-800 flex flex-col min-h-screen overflow-x-hidden antialiased selection:bg-[#009aae] selection:text-white">
 
     <!-- Header Oficial Ministerio de Seguridad PBA -->
-    <header class="bg-[#009aae] shadow-md px-5 sm:px-8 py-3 sm:py-3.5 flex justify-between items-center z-20 sticky top-0">
+    <header class="bg-[#009aae] shadow-md px-5 sm:px-8 py-3 sm:py-3.5 flex justify-between items-center z-20 sticky top-0 flex-shrink-0">
         <div class="flex items-center gap-3">
             <a href="index.html" class="flex items-center" title="Ministerio de Seguridad - Gobierno de la Provincia de Buenos Aires">
                 <img src="assets/logo_ministerio.svg" alt="Ministerio de Seguridad - Gobierno de la Provincia de Buenos Aires" class="h-10 sm:h-12 w-auto object-contain">
@@ -126,11 +126,13 @@
     </header>
 
     <!-- Main Hero Content -->
-    <main class="flex-grow flex items-center justify-center relative py-6 sm:py-8 px-4 sm:px-6 w-full">
-        <!-- Fondo sutil de gradiente decorativo con turquesa oficial -->
-        <div class="absolute inset-0 opacity-20 pointer-events-none animate-float" style="background-image: radial-gradient(circle at 50% 45%, #009aae 0%, transparent 70%);"></div>
-        <div class="absolute -top-24 -right-24 w-96 h-96 bg-[#009aae]/10 rounded-full blur-3xl pointer-events-none"></div>
-        <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-[#0e3846]/10 rounded-full blur-3xl pointer-events-none"></div>
+    <main class="flex-grow flex items-center justify-center relative py-4 sm:py-6 px-4 sm:px-6 w-full">
+        <!-- Fondo sutil de gradiente decorativo con contención de desbordamiento -->
+        <div class="absolute inset-0 overflow-hidden pointer-events-none">
+            <div class="absolute inset-0 opacity-20 animate-float" style="background-image: radial-gradient(circle at 50% 45%, #009aae 0%, transparent 70%);"></div>
+            <div class="absolute -top-24 -right-24 w-96 h-96 bg-[#009aae]/10 rounded-full blur-3xl"></div>
+            <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-[#0e3846]/10 rounded-full blur-3xl"></div>
+        </div>
 
         <div class="hero-card w-full max-w-4xl bg-white rounded-2xl shadow-xl shadow-slate-200/60 border border-slate-200/80 p-6 sm:p-8 lg:p-9 relative z-10 animate-fade-in-up my-auto">
             
@@ -175,7 +177,7 @@
     </main>
 
     <!-- Footer Institucional Pegado Abajo (mt-auto) -->
-    <footer class="mt-auto w-full bg-[#0e2a35] text-slate-300 py-3 sm:py-3.5 border-t border-[#133b4a]">
+    <footer class="mt-auto w-full bg-[#0e2a35] text-slate-300 py-3 sm:py-3.5 border-t border-[#133b4a] flex-shrink-0">
         <div class="container mx-auto px-4 sm:px-8 flex flex-col sm:flex-row justify-between items-center gap-2 text-xs text-slate-400">
             <p class="text-center sm:text-left">Programa de fortalecimiento en la lucha contra la trata de personas y delitos conexos</p>
             <p class="font-medium text-slate-300 text-center sm:text-right">Ministerio de Seguridad &middot; Gobierno de la Provincia de Buenos Aires</p>
