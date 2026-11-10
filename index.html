@@ -20,7 +20,7 @@
         }
         body {
             font-family: 'Encode Sans', 'Roboto', system-ui, sans-serif;
-            background-color: #f4f9fa;
+            background-color: #ffffff;
         }
         @keyframes fadeInUp {
             from { opacity: 0; transform: translateY(20px); }
@@ -42,56 +42,6 @@
         .delay-200 { animation-delay: 200ms; }
         .delay-300 { animation-delay: 300ms; }
 
-        /* Ajustes de escala responsiva para pantallas notebook o altura vertical acotada */
-        @media (max-height: 880px) {
-            .hero-card {
-                max-width: 68rem !important;
-                padding: 1.25rem 1.75rem !important;
-            }
-            .hero-title {
-                font-size: 1.45rem !important;
-                line-height: 1.3 !important;
-                margin-bottom: 0.25rem !important;
-            }
-            .hero-subtitle {
-                font-size: 0.825rem !important;
-            }
-            .hero-institution {
-                font-size: 0.8rem !important;
-                margin-top: 0.15rem !important;
-            }
-            .hero-body {
-                font-size: 0.875rem !important;
-                line-height: 1.45 !important;
-                margin-bottom: 0.9rem !important;
-            }
-            .hero-body p {
-                margin-bottom: 0.5rem !important;
-            }
-            .hero-btn-container {
-                padding-top: 0.35rem !important;
-            }
-            .hero-btn {
-                padding: 0.55rem 1.6rem !important;
-                font-size: 0.875rem !important;
-            }
-        }
-
-        @media (max-height: 740px) {
-            .hero-card {
-                padding: 1rem 1.25rem !important;
-            }
-            .hero-title {
-                font-size: 1.25rem !important;
-            }
-            .hero-body {
-                font-size: 0.8rem !important;
-                line-height: 1.38 !important;
-            }
-            .hero-body p {
-                margin-bottom: 0.35rem !important;
-            }
-        }
 
         /* Ocultar badge y drawer de Netlify */
         #netlify-drawer,
@@ -126,53 +76,188 @@
     </header>
 
     <!-- Main Hero Content -->
-    <main class="flex-grow flex items-center justify-center relative py-4 sm:py-6 px-4 sm:px-6 w-full">
-        <!-- Fondo sutil de gradiente decorativo con contención de desbordamiento -->
-        <div class="absolute inset-0 overflow-hidden pointer-events-none">
-            <div class="absolute inset-0 opacity-20 animate-float" style="background-image: radial-gradient(circle at 50% 45%, #009aae 0%, transparent 70%);"></div>
-            <div class="absolute -top-24 -right-24 w-96 h-96 bg-[#009aae]/10 rounded-full blur-3xl"></div>
-            <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-[#0e3846]/10 rounded-full blur-3xl"></div>
-        </div>
+    <main class="flex-grow flex flex-col justify-center relative py-8 sm:py-12 lg:py-14 px-4 sm:px-6 lg:px-8 w-full bg-white">
 
-        <div class="hero-card w-full max-w-4xl bg-white rounded-2xl shadow-xl shadow-slate-200/60 border border-slate-200/80 p-6 sm:p-8 lg:p-9 relative z-10 animate-fade-in-up my-auto">
+        <div class="w-full max-w-5xl mx-auto relative z-10 space-y-10 sm:space-y-12 my-auto">
             
-            <!-- Encabezado y Título Fiel al Bosquejo -->
-            <div class="text-left mb-5 sm:mb-6 animate-fade-in-up delay-100 border-b border-slate-100 pb-4">
-                <span class="hero-subtitle inline-block text-xs sm:text-sm font-bold text-[#009aae] tracking-wide uppercase mb-1">
-                    Estrategia de Monitoreo y Evaluación
-                </span>
-                <h1 class="hero-title text-xl sm:text-2xl lg:text-3xl font-extrabold text-[#0e3846] tracking-tight mb-2 leading-tight">
-                    Programa de fortalecimiento de las capacidades de la policía bonaerense en la lucha contra la trata de personas y delitos conexos
-                </h1>
-                <p class="hero-institution text-xs sm:text-sm font-semibold text-[#009aae]">
-                    Provincia de Buenos Aires <span class="font-normal text-slate-400">|</span> Ministerio de Seguridad
-                </p>
-            </div>
+            <!-- Bloque Superior: Presentación y Texto Oficial Completo -->
+            <section class="flex flex-col space-y-5 animate-fade-in-up">
+                
+                <!-- Encabezado y Título -->
+                <div class="text-left border-b border-slate-200/80 pb-4 sm:pb-5">
+                    <span class="inline-block text-xs sm:text-sm font-bold text-[#009aae] tracking-wider uppercase mb-1.5">
+                        Estrategia de Monitoreo y Evaluación
+                    </span>
+                    <h1 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#0e3846] tracking-tight mb-2.5 leading-tight">
+                        Programa de fortalecimiento de las capacidades de la policía bonaerense en la lucha contra la trata de personas y delitos conexos
+                    </h1>
+                    <p class="text-xs sm:text-sm font-semibold text-[#009aae] flex items-center gap-2">
+                        <span>Provincia de Buenos Aires</span>
+                        <span class="text-slate-300 font-normal">|</span>
+                        <span class="text-slate-600 font-medium">Ministerio de Seguridad</span>
+                    </p>
+                </div>
 
-            <!-- Cuerpo de Texto (Bosquejo Oficial) -->
-            <div class="hero-body text-slate-700 space-y-3.5 sm:space-y-4 text-left leading-relaxed text-sm sm:text-base animate-fade-in-up delay-200">
-                <p>
-                    La estrategia de monitoreo y evaluación del <strong class="text-slate-900 font-bold">Programa de fortalecimiento de las capacidades de las Policías de la Provincia de Buenos Aires en la lucha contra la trata de personas y delitos conexos</strong> tiene como propósito fortalecer la gestión del programa y contribuir a la toma de decisiones estratégicas basada en evidencia.
-                </p>
-                <p>
-                    El programa surge de la necesidad de fortalecer la capacidad de respuesta policial frente a un delito complejo y dinámico, cuyas modalidades de captación, explotación, ocultamiento y financiamiento incorporan nuevas dimensiones, entre ellas el uso de entornos digitales. En este contexto, el programa busca generar condiciones institucionales que permitan mejorar de manera sostenida el reconocimiento del delito, la gestión de la información, la estandarización de las actuaciones y la coordinación con otros actores del sistema, priorizando la protección de las víctimas.
-                </p>
-                <p>
-                    La línea de base del programa está compuesta por <strong class="text-slate-900 font-bold">15 indicadores: 11 de resultados y 4 de impacto</strong>. Estos indicadores fueron definidos a partir de la <strong class="text-slate-900 font-bold">Teoría de Cambio</strong> y se organizan en cuatro ejes que representan sus principales dimensiones de intervención: <strong class="text-slate-900 font-bold">formación, información, estandarización y coordinación interinstitucional</strong>.
-                </p>
-                <p>
-                    Para facilitar la exploración de los datos, el seguimiento de los avances y el análisis de los resultados, el tablero se estructura en <strong class="text-slate-900 font-bold">cinco vistas</strong>, correspondientes a cada uno de estos ejes de intervención y al impacto global del programa.
-                </p>
-            </div>
+                <!-- Cuerpo de Texto Oficial Completo e Íntegro (4 Párrafos) -->
+                <div class="text-slate-700 space-y-4 text-left leading-relaxed text-sm sm:text-base">
+                    <p>
+                        La estrategia de monitoreo y evaluación del <strong class="text-slate-900 font-bold">Programa de fortalecimiento de las capacidades de las Policías de la Provincia de Buenos Aires en la lucha contra la trata de personas y delitos conexos</strong> tiene como propósito fortalecer la gestión del programa y contribuir a la toma de decisiones estratégicas basada en evidencia.
+                    </p>
+                    <p>
+                        El programa surge de la necesidad de fortalecer la capacidad de respuesta policial frente a un delito complejo y dinámico, cuyas modalidades de captación, explotación, ocultamiento y financiamiento incorporan nuevas dimensiones, entre ellas el uso de entornos digitales. En este contexto, el programa busca generar condiciones institucionales que permitan mejorar de manera sostenida el reconocimiento del delito, la gestión de la información, la estandarización de las actuaciones y la coordinación con otros actores del sistema, priorizando la protección de las víctimas.
+                    </p>
+                    <p>
+                        La línea de base del programa está compuesta por <strong class="text-slate-900 font-bold">15 indicadores: 11 de resultados y 4 de impacto</strong>. Estos indicadores fueron definidos a partir de la <strong class="text-slate-900 font-bold">Teoría de Cambio</strong> y se organizan en cuatro ejes que representan sus principales dimensiones de intervención: <strong class="text-slate-900 font-bold">formación, información, estandarización y coordinación interinstitucional</strong>.
+                    </p>
+                    <p>
+                        Para facilitar la exploración de los datos, el seguimiento de los avances y el análisis de los resultados, el tablero se estructura en <strong class="text-slate-900 font-bold">cinco vistas</strong>, correspondientes a cada uno de estos ejes de intervención y al impacto global del programa. Actualmente, el sistema presenta el módulo correspondiente al <strong class="text-[#009aae] font-bold">Objetivo Específico 1: Formación</strong>, previendo la incorporación progresiva de los ejes restantes.
+                    </p>
+                </div>
 
-            <!-- Botón de Acción -->
-            <div class="hero-btn-container text-center sm:text-right animate-fade-in-up delay-300 pt-3 sm:pt-4">
-                <a href="dashboard.html" class="hero-btn inline-flex items-center gap-2.5 bg-[#009aae] hover:bg-[#008294] text-white px-7 py-3 rounded-xl text-sm sm:text-base font-bold transition-all duration-300 shadow-md shadow-[#009aae]/30 hover:shadow-lg hover:shadow-[#009aae]/40 hover:-translate-y-0.5 w-full sm:w-auto justify-center cursor-pointer">
-                    <span>Ingresar al Tablero Interactivo</span>
-                    <i class="fa-solid fa-arrow-right text-xs sm:text-sm transition-transform group-hover:translate-x-1"></i>
-                </a>
-            </div>
-            
+                <!-- Franja de Métricas / Chips Clave + Botón de Acción -->
+                <div class="pt-2 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                    <div class="flex flex-wrap items-center gap-2">
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold bg-white border border-slate-200 text-slate-700 shadow-sm">
+                            <i class="fa-solid fa-chart-line text-[#009aae]"></i>
+                            <span>15 Indicadores (11 R &middot; 4 I)</span>
+                        </span>
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold bg-white border border-slate-200 text-slate-700 shadow-sm">
+                            <i class="fa-solid fa-cubes text-[#009aae]"></i>
+                            <span>4 Ejes Estratégicos</span>
+                        </span>
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold bg-white border border-slate-200 text-slate-700 shadow-sm">
+                            <i class="fa-solid fa-shield-halved text-[#009aae]"></i>
+                            <span>Enfoque de DDHH</span>
+                        </span>
+                    </div>
+
+                    <a href="dashboard.html" class="inline-flex items-center gap-2.5 bg-[#009aae] hover:bg-[#008294] text-white px-7 py-3 rounded-xl text-sm sm:text-base font-bold transition-all duration-300 shadow-md shadow-[#009aae]/30 hover:shadow-lg hover:shadow-[#009aae]/40 hover:-translate-y-0.5 justify-center w-full sm:w-auto cursor-pointer group flex-shrink-0">
+                        <span>Ingresar al Tablero Interactivo</span>
+                        <i class="fa-solid fa-arrow-right text-xs sm:text-sm transition-transform group-hover:translate-x-1"></i>
+                    </a>
+                </div>
+
+            </section>
+
+            <!-- Bloque Inferior: Franja Horizontal de los 4 Objetivos Específicos -->
+            <section class="animate-fade-in-up delay-200 pt-4">
+                
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-3.5 border-b border-slate-200/80 mb-5">
+                    <div>
+                        <span class="text-xs font-bold text-[#009aae] uppercase tracking-wider block mb-0.5">Ejes de Intervención</span>
+                        <h2 class="text-base sm:text-lg font-bold text-[#0e3846]">
+                            Objetivos Específicos del Programa
+                        </h2>
+                    </div>
+                    <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-slate-200/80 text-slate-600 self-start sm:self-auto">
+                        Totalidad del Proyecto &middot; Medición Progresiva
+                    </span>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                    
+                    <!-- Tarjeta 1: Objetivo 1 (Formación Policial) [ACTIVO] -->
+                    <a href="dashboard.html" class="group relative flex flex-col justify-between bg-white rounded-xl p-4 sm:p-5 border-2 border-[#009aae] shadow-lg shadow-[#009aae]/12 hover:shadow-xl hover:shadow-[#009aae]/22 transition-all duration-300 hover:-translate-y-1 cursor-pointer">
+                        <div>
+                            <div class="flex items-center justify-between gap-2 mb-2.5">
+                                <span class="text-[11px] font-bold text-[#009aae] uppercase tracking-wider">Objetivo 1</span>
+                                <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-[10px] font-bold bg-[#009aae]/15 text-[#008294] border border-[#009aae]/30">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-[#009aae] animate-pulse"></span>
+                                    Activo en Tablero
+                                </span>
+                            </div>
+                            <div class="w-10 h-10 rounded-lg bg-[#009aae]/10 text-[#009aae] flex items-center justify-center text-lg font-bold mb-2.5 group-hover:bg-[#009aae] group-hover:text-white transition-colors duration-300">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                            </div>
+                            <h3 class="text-sm sm:text-base font-bold text-[#0e3846] leading-snug group-hover:text-[#009aae] transition-colors mb-1.5">
+                                Formación Policial
+                            </h3>
+                            <p class="text-xs text-slate-600 leading-relaxed">
+                                Fortalecimiento continuo de competencias teóricas, tácticas y operativas para la detección temprana del delito y asistencia adecuada a víctimas.
+                            </p>
+                        </div>
+                        <div class="mt-4 pt-2.5 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-[#009aae]">
+                            <span>Explorar indicadores</span>
+                            <i class="fa-solid fa-arrow-right text-[11px] transition-transform group-hover:translate-x-1"></i>
+                        </div>
+                    </a>
+
+                    <!-- Tarjeta 2: Objetivo 2 (Gestión de la Información) [PRÓXIMA FASE] -->
+                    <div class="relative flex flex-col justify-between bg-[#f8fafc] rounded-xl p-4 sm:p-5 border border-slate-200 text-slate-400 select-none shadow-sm hover:border-slate-300 transition-colors">
+                        <div>
+                            <div class="flex items-center justify-between gap-2 mb-2.5">
+                                <span class="text-[11px] font-semibold text-slate-400 uppercase tracking-wider">Objetivo 2</span>
+                                <span class="px-2 py-0.5 rounded-full text-[10px] font-medium bg-slate-200/70 border border-slate-200 text-slate-500">
+                                    Próxima Fase
+                                </span>
+                            </div>
+                            <div class="w-10 h-10 rounded-lg bg-slate-200/60 text-slate-400 flex items-center justify-center text-lg mb-2.5">
+                                <i class="fa-solid fa-database"></i>
+                            </div>
+                            <h3 class="text-sm sm:text-base font-semibold text-slate-700 leading-snug mb-1.5">
+                                Gestión de Información
+                            </h3>
+                            <p class="text-xs text-slate-500 leading-relaxed">
+                                Optimización de registros, sistemas de alerta e inteligencia criminal para el seguimiento de redes delictivas complejas y entornos digitales.
+                            </p>
+                        </div>
+                        <div class="mt-4 pt-2.5 border-t border-slate-200/80 text-[11px] font-medium text-slate-400 italic">
+                            En desarrollo
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 3: Objetivo 3 (Estandarización Operativa) [PRÓXIMA FASE] -->
+                    <div class="relative flex flex-col justify-between bg-[#f8fafc] rounded-xl p-4 sm:p-5 border border-slate-200 text-slate-400 select-none shadow-sm hover:border-slate-300 transition-colors">
+                        <div>
+                            <div class="flex items-center justify-between gap-2 mb-2.5">
+                                <span class="text-[11px] font-semibold text-slate-400 uppercase tracking-wider">Objetivo 3</span>
+                                <span class="px-2 py-0.5 rounded-full text-[10px] font-medium bg-slate-200/70 border border-slate-200 text-slate-500">
+                                    Próxima Fase
+                                </span>
+                            </div>
+                            <div class="w-10 h-10 rounded-lg bg-slate-200/60 text-slate-400 flex items-center justify-center text-lg mb-2.5">
+                                <i class="fa-solid fa-file-shield"></i>
+                            </div>
+                            <h3 class="text-sm sm:text-base font-semibold text-slate-700 leading-snug mb-1.5">
+                                Estandarización Operativa
+                            </h3>
+                            <p class="text-xs text-slate-500 leading-relaxed">
+                                Homogeneización de protocolos y guías de intervención inmediata con estricto apego a los derechos humanos y resguardo probatorio.
+                            </p>
+                        </div>
+                        <div class="mt-4 pt-2.5 border-t border-slate-200/80 text-[11px] font-medium text-slate-400 italic">
+                            En desarrollo
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 4: Objetivo 4 (Coordinación Interinstitucional) [PRÓXIMA FASE] -->
+                    <div class="relative flex flex-col justify-between bg-[#f8fafc] rounded-xl p-4 sm:p-5 border border-slate-200 text-slate-400 select-none shadow-sm hover:border-slate-300 transition-colors">
+                        <div>
+                            <div class="flex items-center justify-between gap-2 mb-2.5">
+                                <span class="text-[11px] font-semibold text-slate-400 uppercase tracking-wider">Objetivo 4</span>
+                                <span class="px-2 py-0.5 rounded-full text-[10px] font-medium bg-slate-200/70 border border-slate-200 text-slate-500">
+                                    Próxima Fase
+                                </span>
+                            </div>
+                            <div class="w-10 h-10 rounded-lg bg-slate-200/60 text-slate-400 flex items-center justify-center text-lg mb-2.5">
+                                <i class="fa-solid fa-handshake-angle"></i>
+                            </div>
+                            <h3 class="text-sm sm:text-base font-semibold text-slate-700 leading-snug mb-1.5">
+                                Articulación Institucional
+                            </h3>
+                            <p class="text-xs text-slate-500 leading-relaxed">
+                                Articulación fluida con el Poder Judicial, fiscalías especializadas, organismos de rescate y dispositivos de asistencia integral a víctimas.
+                            </p>
+                        </div>
+                        <div class="mt-4 pt-2.5 border-t border-slate-200/80 text-[11px] font-medium text-slate-400 italic">
+                            En desarrollo
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
         </div>
     </main>
 
